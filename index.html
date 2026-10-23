@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SVG House — Exercise 4.1</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="#top">COS30045</a>
+    <nav aria-label="Page sections">
+      <a href="#drawing">Drawing</a>
+      <a href="#coordinates">Coordinates</a>
+      <a href="#dom">DOM</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="page-heading">
+      <p class="course-label">Exercise 4.1 <span>·</span> Week 4</p>
+      <h1>House &amp; garden</h1>
+      <p class="intro">A house made from SVG shapes, with the coordinates behind the drawing shown below.</p>
+    </div>
+
+    <figure id="drawing" class="house-figure">
+      <svg id="house-svg" viewBox="0 0 1000 620" role="img" aria-labelledby="house-title house-desc">
+        <title id="house-title">House number 106212636 in a garden</title>
+        <desc id="house-desc">A terracotta roof house with student ID 106212636, sun, clouds, tree, flowers and path.</desc>
+
+        <rect class="sky" x="0" y="0" width="1000" height="620"/>
+        <circle class="sun" cx="835" cy="105" r="54"/>
+        <g class="sun-rays">
+          <line x1="835" y1="25" x2="835" y2="5"/>
+          <line x1="835" y1="185" x2="835" y2="205"/>
+          <line x1="755" y1="105" x2="735" y2="105"/>
+          <line x1="915" y1="105" x2="935" y2="105"/>
+          <line x1="779" y1="49" x2="764" y2="34"/>
+          <line x1="891" y1="161" x2="906" y2="176"/>
+          <line x1="891" y1="49" x2="906" y2="34"/>
+          <line x1="779" y1="161" x2="764" y2="176"/>
+        </g>
+
+        <g class="cloud" transform="translate(115 95)">
+          <ellipse cx="65" cy="35" rx="65" ry="28"/>
+          <circle cx="52" cy="17" r="29"/>
+          <circle cx="87" cy="22" r="37"/>
+        </g>
+
+        <path class="hills" d="M0 385 Q170 285 340 385 T680 385 T1020 385 L1020 620 L0 620 Z"/>
+        <rect class="grass" x="0" y="430" width="1000" height="190"/>
+
+        <g class="house">
+          <rect class="wall" x="270" y="265" width="430" height="265" rx="4"/>
+          <rect class="chimney" x="610" y="130" width="55" height="115" rx="3"/>
+          <polygon class="roof" points="225,285 485,105 745,285"/>
+          <polyline class="roof-edge" points="225,285 485,105 745,285"/>
+
+          <rect class="door" x="440" y="360" width="92" height="170" rx="5"/>
+          <circle class="door-knob" cx="510" cy="447" r="7"/>
+
+          <g class="windows" transform="translate(0 8)">
+            <g class="window" transform="translate(315 325)">
+              <rect x="0" y="0" width="86" height="92" rx="4"/>
+              <line x1="43" y1="0" x2="43" y2="92"/>
+              <line x1="0" y1="46" x2="86" y2="46"/>
+            </g>
+            <g class="window" transform="translate(570 325)">
+              <rect x="0" y="0" width="86" height="92" rx="4"/>
+              <line x1="43" y1="0" x2="43" y2="92"/>
+              <line x1="0" y1="46" x2="86" y2="46"/>
+            </g>
+          </g>
+          <rect class="number-plaque" x="420" y="297" width="130" height="36" rx="4"/>
+          <text class="number-text" x="485" y="321" text-anchor="middle">106212636</text>
+        </g>
+
+        <path class="garden-path" d="M450 530 C425 560 390 590 360 620 L620 620 C595 588 550 558 530 530 Z"/>
+        <rect class="door-step" x="431" y="526" width="110" height="12" rx="2"/>
+
+        <g class="tree" transform="translate(90 270)">
+          <rect class="trunk" x="70" y="120" width="45" height="180" rx="8"/>
+          <circle cx="92" cy="95" r="76"/>
+          <circle cx="45" cy="125" r="54"/>
+          <circle cx="142" cy="126" r="58"/>
+        </g>
+
+        <g class="flowers">
+          <g transform="translate(780 470)">
+            <line x1="0" y1="10" x2="0" y2="82"/>
+            <circle cx="0" cy="0" r="17"/>
+            <circle cx="-18" cy="0" r="10"/>
+            <circle cx="18" cy="0" r="10"/>
+            <circle cx="0" cy="-18" r="10"/>
+            <circle cx="0" cy="18" r="10"/>
+          </g>
+          <g transform="translate(855 495)">
+            <line x1="0" y1="10" x2="0" y2="65"/>
+            <circle cx="0" cy="0" r="14"/>
+            <circle cx="-15" cy="0" r="8"/>
+            <circle cx="15" cy="0" r="8"/>
+            <circle cx="0" cy="-15" r="8"/>
+            <circle cx="0" cy="15" r="8"/>
+          </g>
+        </g>
+      </svg>
+      <figcaption>Figure 1. SVG house and garden · House number 106212636</figcaption>
+    </figure>
+
+    <section id="coordinates" class="section">
+      <h2>Reading the coordinates</h2>
+      <p>The <code>viewBox</code> is <code>1000 × 620</code>. The top-left corner is <code>(0, 0)</code>; x goes right and y goes down. Each number on the images matches a row below.</p>
+      <figure class="annotation">
+        <figcaption>Shapes in the drawing</figcaption>
+        <a href="images/shape-coordinates-1.svg" target="_blank" rel="noopener"><img src="images/shape-coordinates-1.svg" alt="House screenshot with markers 1 through 5 pointing to wall, sun, cloud, sun ray and roof"></a>
+        <ol class="annotation-list">
+          <li><strong>Wall · rect</strong><span><code>x="270" y="265"</code> is its top-left corner; <code>width="430" height="265"</code> gives its size.</span></li>
+          <li><strong>Sun · circle</strong><span><code>cx="835" cy="105"</code> puts the centre here. <code>r="54"</code> is the radius.</span></li>
+          <li><strong>Cloud · ellipse</strong><span>The cloud group moves by <code>translate(115 95)</code>. Its ellipse centre <code>(65, 35)</code> appears at <code>(180, 130)</code> in the whole drawing.</span></li>
+          <li><strong>Sun ray · line</strong><span>The top ray goes from <code>(835, 25)</code> to <code>(835, 5)</code>; these are its two ends.</span></li>
+          <li><strong>Roof · polygon</strong><span><code>points="225,285 485,105 745,285"</code> lists left corner, roof peak, then right corner. The shape closes itself.</span></li>
+        </ol>
+      </figure>
+      <figure class="annotation">
+        <figcaption>Outlines, path and grouped windows</figcaption>
+        <a href="images/shape-coordinates-2.svg" target="_blank" rel="noopener"><img src="images/shape-coordinates-2.svg" alt="House screenshot with markers 6 through 9 pointing to roof outline, path, number plaque and windows"></a>
+        <ol class="annotation-list" start="6">
+          <li><strong>Roof outline · polyline</strong><span>It connects the same three roof points. <code>fill: none</code> leaves just the line visible.</span></li>
+          <li><strong>Garden path · path</strong><span><code>M450 530</code> starts at the door; <code>C</code> draws curved sides and <code>Z</code> closes the shape.</span></li>
+          <li><strong>House number · text</strong><span><code>x="485" y="321"</code> positions the text. <code>text-anchor="middle"</code> centres 106212636 on the plaque.</span></li>
+          <li><strong>Two windows · g</strong><span>Both use the <code>.window</code> style. Their groups move to <code>(315, 325)</code> and <code>(570, 325)</code>; the outer group moves both down another <code>8</code> units.</span></li>
+        </ol>
+      </figure>
+    </section>
+
+    <section id="dom" class="section">
+      <h2>SVG in the DOM</h2>
+      <figure class="dom-figure">
+        <a href="images/devtools-dom.png" target="_blank" rel="noopener">
+          <img class="dom-image" src="images/devtools-dom.png" alt="House SVG on the page alongside its SVG elements in Chrome DevTools">
+        </a>
+        <figcaption>Figure 2. SVG shapes in the Elements panel.</figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer><span>COS30045 · Exercise 4.1</span><span>106212636</span></footer>
+</body>
+</html>
