@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SVG House — Exercise 4.1</title>
+  <title>SVG House - Exercise 4.1</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -104,31 +104,31 @@
           </g>
         </g>
       </svg>
-      <figcaption>Figure 1. SVG house and garden · House number 106212636</figcaption>
+      <figcaption>Figure 1. SVG house and garden - House number 106212636</figcaption>
     </figure>
 
     <section id="coordinates" class="section">
       <h2>Reading the coordinates</h2>
-      <p>The <code>viewBox</code> is <code>1000 × 620</code>. The top-left corner is <code>(0, 0)</code>; x goes right and y goes down. Each number on the images matches a row below.</p>
+      <p>The <code>viewBox</code> is <code>1000 x 620</code>. The top-left corner is <code>(0, 0)</code>; x goes right and y goes down. Each number on the images matches a row below.</p>
       <figure class="annotation">
         <figcaption>Shapes in the drawing</figcaption>
         <a href="images/shape-coordinates-1.svg" target="_blank" rel="noopener"><img src="images/shape-coordinates-1.svg" alt="House screenshot with markers 1 through 5 pointing to wall, sun, cloud, sun ray and roof"></a>
         <ol class="annotation-list">
-          <li><strong>Wall · rect</strong><span><code>x="270" y="265"</code> is its top-left corner; <code>width="430" height="265"</code> gives its size.</span></li>
-          <li><strong>Sun · circle</strong><span><code>cx="835" cy="105"</code> puts the centre here. <code>r="54"</code> is the radius.</span></li>
-          <li><strong>Cloud · ellipse</strong><span>The cloud group moves by <code>translate(115 95)</code>. Its ellipse centre <code>(65, 35)</code> appears at <code>(180, 130)</code> in the whole drawing.</span></li>
-          <li><strong>Sun ray · line</strong><span>The top ray goes from <code>(835, 25)</code> to <code>(835, 5)</code>; these are its two ends.</span></li>
-          <li><strong>Roof · polygon</strong><span><code>points="225,285 485,105 745,285"</code> lists left corner, roof peak, then right corner. The shape closes itself.</span></li>
+          <li><strong>Wall - rect</strong><span><code>x="270" y="265"</code> is its top-left corner; <code>width="430" height="265"</code> gives its size.</span></li>
+          <li><strong>Sun - circle</strong><span><code>cx="835" cy="105"</code> puts the centre here. <code>r="54"</code> is the radius.</span></li>
+          <li><strong>Cloud - ellipse</strong><span>The cloud group moves by <code>translate(115 95)</code>. Its ellipse centre <code>(65, 35)</code> appears at <code>(180, 130)</code> in the whole drawing.</span></li>
+          <li><strong>Sun ray - line</strong><span>The top ray goes from <code>(835, 25)</code> to <code>(835, 5)</code>; these are its two ends.</span></li>
+          <li><strong>Roof - polygon</strong><span><code>points="225,285 485,105 745,285"</code> lists left corner, roof peak, then right corner. The shape closes itself.</span></li>
         </ol>
       </figure>
       <figure class="annotation">
         <figcaption>Outlines, path and grouped windows</figcaption>
         <a href="images/shape-coordinates-2.svg" target="_blank" rel="noopener"><img src="images/shape-coordinates-2.svg" alt="House screenshot with markers 6 through 9 pointing to roof outline, path, number plaque and windows"></a>
         <ol class="annotation-list" start="6">
-          <li><strong>Roof outline · polyline</strong><span>It connects the same three roof points. <code>fill: none</code> leaves just the line visible.</span></li>
-          <li><strong>Garden path · path</strong><span><code>M450 530</code> starts at the door; <code>C</code> draws curved sides and <code>Z</code> closes the shape.</span></li>
-          <li><strong>House number · text</strong><span><code>x="485" y="321"</code> positions the text. <code>text-anchor="middle"</code> centres 106212636 on the plaque.</span></li>
-          <li><strong>Two windows · g</strong><span>Both use the <code>.window</code> style. Their groups move to <code>(315, 325)</code> and <code>(570, 325)</code>; the outer group moves both down another <code>8</code> units.</span></li>
+          <li><strong>Roof outline - polyline</strong><span>It connects the same three roof points. <code>fill: none</code> leaves just the line visible.</span></li>
+          <li><strong>Garden path - path</strong><span><code>M450 530</code> starts at the door; <code>C</code> draws curved sides and <code>Z</code> closes the shape.</span></li>
+          <li><strong>House number - text</strong><span><code>x="485" y="321"</code> positions the text. <code>text-anchor="middle"</code> centres 106212636 on the plaque.</span></li>
+          <li><strong>Two windows - g</strong><span>Both use the <code>.window</code> style. Their groups move to <code>(315, 325)</code> and <code>(570, 325)</code>; the outer group moves both down another <code>8</code> units.</span></li>
         </ol>
       </figure>
     </section>
