@@ -5,3 +5,7 @@ A house and garden drawn with SVG shapes. The number above the door is my studen
 The two windows are grouped with `<g>` and use the same CSS style. The numbered images explain where the shapes' coordinates appear in the drawing. At the bottom of the page, a screenshot shows the house alongside its SVG elements in Chrome DevTools.
 
 Open `index.html` in a browser to see the page.
+
+## AI declaration
+
+ChatGPT helped with the SVG drawing, styling and coordinate annotations.
